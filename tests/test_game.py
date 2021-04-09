@@ -11,11 +11,11 @@ class TestGame(unittest.TestCase):
 
 # test inputs are valid
     def test_input_is_valid(self):
-        self.assertEqual("please enter valid player", game(1, 2))
+        self.assertEqual("Invalid input: Please enter valid player", game(1, 2))
 
-    def test_either_input_is_invalid(self):
-        self.assertEqual("please enter valid player", game(self.rock, 2))
-        self.assertEqual
+    def test_one_input_is_invalid(self):
+        self.assertEqual("Invalid input: Please enter valid player", game(self.rock, 2))
+        self.assertEqual("Invalid input: Please enter valid player", game("string", self.paper))
 
     def test_player_has_correct_gesture(self):
         self.assertEqual("Invalid gesture: Valid gestures are - rock, paper, scissors.", 
