@@ -44,7 +44,7 @@ def game(*args):
 
     # if gestures are equal its a draw
     if player1.gesture == player2.gesture:
-        return "draw"
+        return f"draw: {player1.name} and {player2.name} both chose {player1.gesture}"
     
     # check all winning player1 scenarios...
     if ( (player1.gesture == "rock" and player2.gesture == "scissors") or   
